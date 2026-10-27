@@ -74,7 +74,15 @@ nav {
     position: static;
     }
 }
+.containDeepDives {
+    font-family: monospace;
+    font-size: clamp(1rem, 1vw, 2rem);
+    color:light-dark(rgb(32, 32, 31), lavenderblush);
+    background-image: none;
+    border:none;
+}
 .containDeepDives img {
     height:auto;
     width:35%
+
 }
