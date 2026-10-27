@@ -1,0 +1,144 @@
+h1 {
+    margin-bottom:5vw;
+}
+.textContainer {
+    width:60vw;
+}
+.introText {
+    margin-top: 7vw;
+    overflow:hidden;
+}
+/**************************
+* MARK: Marquee containers
+**************************/
+.marquee {
+    transform: translateX(100%);
+    animation: scroll-left 8s linear infinite;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width:20vw;
+    padding:2%;
+    overflow:visible
+}
+@media (prefers-reduced-motion: reduce) {
+    .marquee {
+        animation: scroll-left 16s linear infinite;
+    }
+}
+.marquee:hover {
+	animation-play-state: paused;
+}
+.longMarquee {
+    animation: scroll-left-long 10s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+    .longMarquee {
+        animation: scroll-left-long 20s linear infinite;
+    }
+}
+.smallMarqueeBoxText {
+    width: 24.8vw;
+}
+.marqueeBox {
+    position:relative;
+    text-align:center;
+    width:47%;
+    min-height:250px;
+    height:18vw;
+    border: 0.15vw solid light-dark(var(--light-tekstkleur), var(--dark-tekstkleur));
+    border-bottom: 0.4vw solid light-dark(var(--light-tekstkleur), var(--dark-tekstkleur));
+    border-radius: 0.5vw;
+    background-image: light-dark(linear-gradient(170deg in oklch, var(--light-outlinekleur), var(--light-accentkleur)), linear-gradient(170deg in oklch, var(--dark-hoofdkleur), var(--dark-rood-outlinekleur)));
+    margin-bottom: 3vw;
+    overflow:hidden;
+    float:left;
+}
+.marqueeBox h2 {
+    margin-left:0;
+}
+.marqueeBox img {
+    width:auto;
+    height:14vw;
+    margin-right:0;
+    margin-bottom:0;
+}
+.marqueeBox span {
+    font-size:clamp(2rem, 2vw, 2.5rem);
+    outline: 0.3vw solid light-dark(var(--light-outlinekleur), var(--dark-groen-schaduwkleur));
+}
+@keyframes scroll-left {
+                0% {transform: translateX(150%);}
+                100% {transform: translateX(-155%);}
+            }
+@keyframes scroll-left-intermediate {
+                0% {transform: translateX(150%);}
+                100% {transform: translateX(-400%);}
+            }
+@keyframes scroll-left-long {
+                0% {transform: translateX(150%);}
+                100% {transform: translateX(-470%);}
+            }
+.marquee img {
+    height:4vw;
+    width:auto;
+    margin-right: 0.5vw;
+}
+.marquee a {
+    color:transparent;
+    text-shadow:none;
+}
+.stampImg {
+    border:none !important;
+    background-image:linear-gradient(170deg in oklch, rgb(200, 208, 233), rgb(212, 230, 224), rgb(197, 219, 200));
+    margin-right: 0.3vw;
+}
+.intermediateMarquee {
+    animation: scroll-left-intermediate 10s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+    .intermediateMarquee {
+        animation: scroll-left-intermediate 20s linear infinite;
+    }
+}
+.intermediateMarquee img {
+    height:10vw;
+}
+.rightSideBox {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height:auto;
+    /*height:32vw;*/
+    float: right;
+}
+/**************************
+* MARK: Badge
+**************************/
+.awardBadge {
+    position: absolute;
+    transform: rotate(20deg);
+    /*
+    right: 4.2vw;
+    top: 5.8vw;
+    */
+    right:1.5vw;
+    top:0.5vw;
+    width:5vw;
+    height:auto;
+    border-radius: 50%;
+    text-align: center;
+    color: rgb(97, 76, 0);
+    text-shadow: 0.2vw 0.1vw 0.1vw rgb(255, 243, 190);
+    background-image: linear-gradient(-32deg in oklch, rgb(125, 89, 12), rgb(164, 136, 31) 20%, rgb(255, 243, 190) 50%, rgb(236, 214, 117), rgb(188, 157, 65) 75%, rgb(164, 136, 31) 80%, rgb(125, 89, 12));
+}
+/**************************
+* MARK: Zoom effect
+**************************/
+.recentImg {
+    transform: scale(1);
+    transition: 550ms;
+}
+.recentImg:hover{
+    transform: scale(1.65);
+}

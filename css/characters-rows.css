@@ -1,0 +1,77 @@
+/**************************
+* MARK: Rows
+**************************/
+.textContainer:not(.introText) {
+    min-height: 86em;
+}
+.charRow {
+    position:relative;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top:1%;
+    padding-bottom:1.5%;
+}
+.charRow p {
+    display:flex;
+    justify-content: center;
+    font-size: 1vw;
+}
+.charRow a {
+    position: relative;
+    display:flex;
+    justify-content: center;
+    min-width: 80px;
+    width:3.5em;
+    min-height: 80px;
+    height:3.5em;
+    border-radius: 0.5vw;
+    color:transparent;
+    text-shadow:none;
+    background-color: transparent;
+    background-image: light-dark(radial-gradient(in oklch, rgb(172, 203, 255) 20%, var(--light-outlinekleur)), radial-gradient(in oklch, var(--dark-knop-shine) 50%, var(--dark-groen-schaduwkleur)));
+    border: 0.15vw solid light-dark(var(--light-borderkleur), var(--dark-borderkleur));
+    outline: 0.2em solid light-dark(var(--light-outlinekleur), var(--dark-groen-schaduwkleur));
+    background-size: cover;
+    /*
+    object-fit: cover;
+    object-position: 50% -20%;
+    */
+    margin-bottom:4%;
+}
+/**************************
+* MARK: Icons
+**************************/
+.charRow a:nth-of-type(1) {
+    background-image: url('../images/char-icons/export-abbigail.png'), light-dark(radial-gradient(in oklch, rgb(172, 203, 255) 20%, var(--light-outlinekleur)), radial-gradient(in oklch, var(--dark-knop-shine) 50%, var(--dark-groen-schaduwkleur)))
+}
+.charRow a:nth-of-type(2) {
+    background-image: url('../images/char-icons/export-felissia.png'), light-dark(radial-gradient(in oklch, rgb(172, 203, 255) 20%, var(--light-outlinekleur)), radial-gradient(in oklch, var(--dark-knop-shine) 50%, var(--dark-groen-schaduwkleur)))
+}
+.charRow a:nth-of-type(3) {
+    background-image: url('../images/char-icons/export-goldi.png'), light-dark(radial-gradient(in oklch, rgb(172, 203, 255) 20%, var(--light-outlinekleur)), radial-gradient(in oklch, var(--dark-knop-shine) 50%, var(--dark-groen-schaduwkleur)))
+}
+.charRow a:nth-of-type(4) {
+    background-image: url('../images/char-icons/export-goliaf.png'), light-dark(radial-gradient(in oklch, rgb(172, 203, 255) 20%, var(--light-outlinekleur)), radial-gradient(in oklch, var(--dark-knop-shine) 50%, var(--dark-groen-schaduwkleur)))
+}
+.charRow a:nth-of-type(5) {
+    background-image: url('../images/char-icons/export-kawako.png'), light-dark(radial-gradient(in oklch, rgb(172, 203, 255) 20%, var(--light-outlinekleur)), radial-gradient(in oklch, var(--dark-knop-shine) 50%, var(--dark-groen-schaduwkleur)))
+}
+.charRow a:nth-of-type(6) {
+    background-image: url('../images/char-icons/export-riven.png'), light-dark(radial-gradient(in oklch, rgb(172, 203, 255) 20%, var(--light-outlinekleur)), radial-gradient(in oklch, var(--dark-knop-shine) 50%, var(--dark-groen-schaduwkleur)))
+}
+.charRow a:nth-of-type(7) {
+    background-image: url('../images/char-icons/export-rivke.png'), light-dark(radial-gradient(in oklch, rgb(172, 203, 255) 20%, var(--light-outlinekleur)), radial-gradient(in oklch, var(--dark-knop-shine) 50%, var(--dark-groen-schaduwkleur)))
+}
+.charRow a:nth-of-type(8) {
+    background-image: url('../images/char-icons/export-rosie.png'), light-dark(radial-gradient(in oklch, rgb(172, 203, 255) 20%, var(--light-outlinekleur)), radial-gradient(in oklch, var(--dark-knop-shine) 50%, var(--dark-groen-schaduwkleur)))
+}
+.charRow a:nth-of-type(9) {
+    background-image: url('../images/char-icons/export-song.png'), light-dark(radial-gradient(in oklch, rgb(172, 203, 255) 20%, var(--light-outlinekleur)), radial-gradient(in oklch, var(--dark-knop-shine) 50%, var(--dark-groen-schaduwkleur)))
+}
+.charRow a:nth-of-type(10) {
+    background-image: url('../images/char-icons/export-sungaia.png'), light-dark(radial-gradient(in oklch, rgb(172, 203, 255) 20%, var(--light-outlinekleur)), radial-gradient(in oklch, var(--dark-knop-shine) 50%, var(--dark-groen-schaduwkleur)))
+}
+.charRow a:nth-of-type(11) {
+    background-image: url('../images/char-icons/export-tagha.png'), light-dark(radial-gradient(in oklch, rgb(172, 203, 255) 20%, var(--light-outlinekleur)), radial-gradient(in oklch, var(--dark-knop-shine) 50%, var(--dark-groen-schaduwkleur)))
+}

@@ -1,0 +1,174 @@
+/**************************
+* MARK: Bovenaan
+**************************/
+.entranceDoor {
+    position: relative;
+    z-index: 2;
+}
+.entranceDoor img {
+    height:12vw;
+    background-color: transparent;
+    border:none;
+}
+.gardenFacade {
+    animation: backgroundFade 1ms forwards;
+    animation-timeline: scroll();
+    animation-range: 0vh 50vh;
+    pointer-events: none;
+    z-index:-1;
+}
+@keyframes backgroundFade {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+/**************************
+* MARK: Scrollanimatie
+**************************/
+.walkLength {
+    position: fixed;
+    right:0;
+    top:auto;
+    bottom:0;
+    width:5%;
+    animation: walkAlong linear;
+    animation-timeline: scroll(root block);
+    animation-range: 0% 100%;
+}
+@keyframes walkAlong {
+    0% {
+        top:3vh;
+    }
+    100% {
+        top:90vh;
+    }
+}
+/**************************
+* MARK: Achtergrond
+**************************/
+.waterFilter {
+    background-image: url("https://cdn.pixabay.com/photo/2016/03/16/21/12/water-1261770_1280.jpg");
+    background-position: 0%;
+    background-size: cover;
+    background-color: light-dark(var(--light-borderkleur), var(--dark-groen-schaduwkleur));
+    background-blend-mode: luminosity;
+}
+#bubblesEffect {
+    background-image: none;
+    background-position: 0%;
+    background-size: cover;
+    pointer-events: none;
+    mix-blend-mode: hard-light;
+    z-index:2;
+}
+/**************************
+* MARK: Lijsten
+**************************/
+#peakList {
+    /*width:60em;*/
+    /*min-width:40em;*/
+    min-width:70vw;
+    width:50em;
+    margin-top:-20vh;
+    margin-left:2%;
+}
+.listContainer {
+    display:flex;
+    flex-direction:row;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    margin-bottom:3vw;
+    height:16vw;
+    @media (width < 60em) {
+        height:28vh;
+    }
+}
+.listContainer li {
+    font-family: First Coffee, Comic Relief, sans-serif;
+    font-size:clamp(1rem, 1.7vw, 1.5rem);
+    text-align: center;
+    border: 0.3vw solid light-dark(var(--light-tekstkleur), var(--dark-tekstkleur));
+    border-bottom: 0.6vw solid light-dark(var(--light-tekstkleur), var(--dark-tekstkleur));
+    border-radius:2.5vw;
+    outline: 0.2em solid light-dark(var(--light-outlinekleur), var(--dark-groen-schaduwkleur));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 15vw;
+    padding:2%;
+    margin:1.4vw;
+    margin-right: 0.3vw;
+    float:none;
+    background-image: light-dark(linear-gradient(170deg in oklch, var(--light-outlinekleur), var(--light-accentkleur), var(--dark-groen-schaduwkleur)), linear-gradient(170deg in oklch, var(--dark-hoofdkleur), var(--dark-rood-outlinekleur)));
+    box-shadow: inset 0 0 3vw 1.5vw light-dark(rgba(122, 218, 103, 0.8), transparent), 0.3vw 0.5vw 1.5vw light-dark(var(--light-outlinekleur), transparent);
+    transition: all 250ms;
+}
+.listContainer li:hover {
+    transform: scale(1.03, 1.04);
+}
+.listContainer li:active {
+    box-shadow: inset 0 0 3vw 1.5vw light-dark(var(--light-borderkleur), var(--dark-borderkleur));
+    transition: all 50ms;
+    transform: scale(0.9)
+}
+.listContainer img {
+    height:8vw;
+    background-color: transparent;
+    border:none;
+}
+#explanationContainer {
+    pointer-events: none;
+    position: sticky;
+    left:60%;
+    top:8em;
+    width:30em;
+    height:35em;
+    overflow:hidden;
+    margin:0;
+    text-align: center;
+    border: 0.3vw solid light-dark(var(--light-tekstkleur), var(--dark-tekstkleur));
+    border-bottom: 0.6vw solid light-dark(var(--light-tekstkleur), var(--dark-tekstkleur));
+    border-radius:2.5vw;
+    outline: 0.2em solid light-dark(var(--light-outlinekleur), var(--dark-groen-schaduwkleur));
+    /*
+    background-image: light-dark(linear-gradient(170deg in oklch, var(--light-outlinekleur), var(--light-accentkleur), var(--dark-groen-schaduwkleur)), linear-gradient(170deg in oklch, var(--dark-hoofdkleur), var(--dark-rood-outlinekleur)));
+    */
+    box-shadow: inset 0 0 3vw 1.5vw light-dark(rgba(122, 218, 103, 0.8), transparent), 0.3vw 0.5vw 1.5vw light-dark(var(--light-outlinekleur), transparent);
+    z-index:10;
+}
+#explanationContainer > * {
+    outline: 0.3vw solid light-dark(var(--light-outlinekleur), var(--dark-groen-schaduwkleur));
+}
+#explanationContainer h2 {
+    text-align: left;
+}
+#explanationContainer p {
+    float: left;
+}
+#explanationContainer span {
+    position: absolute;
+    right:0;
+    top:0;
+    min-width:8%;
+    width:8%;
+    transition: all 250ms cubic-bezier(0.19, 1, 0.22, 1);
+    transform: scale(1);
+}
+#explanationContainer span:hover{
+    box-shadow: inset 0 0 0.5vw 0.2vw light-dark(var(--light-borderkleur), var(--dark-borderkleur));
+    transform: scale(1.04, 1.05);
+}
+#move- {
+    right:14% !important;
+}
+#explanationContainer img {
+    min-height:30%;
+    height:10vw;
+    max-width:90%;
+    background-image: light-dark(linear-gradient(170deg in oklch, var(--light-outlinekleur), var(--light-accentkleur), var(--dark-groen-schaduwkleur)), linear-gradient(170deg in oklch, var(--dark-hoofdkleur), var(--dark-rood-outlinekleur)));
+    float: right;
+    clear: right;
+}

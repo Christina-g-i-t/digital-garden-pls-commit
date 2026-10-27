@@ -1,0 +1,70 @@
+/**************************
+* MARK: Links
+**************************/
+#tuinLinkRandom {
+    font-size:clamp(1.5rem, 1.5vw, 2.5rem);
+    color: light-dark(var(--light-tekstkleur), var(--dark-tekstkleur));
+    text-shadow: 0.2vw 0.1vw 0.1vw light-dark(var(--light-outlinekleur), var(--dark-rood-outlinekleur));
+    border: 0.3vw solid light-dark(var(--light-tekstkleur), var(--dark-tekstkleur));
+    border-bottom: 0.6vw solid light-dark(var(--light-tekstkleur), var(--dark-tekstkleur));
+    border-radius:0.5vw;
+    min-width:100px;
+    max-width:30%;
+    background-image: light-dark(linear-gradient(170deg in oklch, var(--light-outlinekleur) 10%, var(--light-accentkleur), var(--dark-groen-schaduwkleur) 90%), linear-gradient(170deg in oklch, var(--dark-hoofdkleur), var(--dark-rood-outlinekleur)));
+    outline: 0.3vw solid light-dark(var(--light-outlinekleur), var(--dark-groen-schaduwkleur));
+    padding:2%;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+#tuinLinkRandom:hover {
+    box-shadow: inset 0 0 0.5vw 0.2vw light-dark(var(--light-borderkleur), var(--dark-borderkleur));
+    transform: scale(1.03, 1.04);
+}
+#tuinLinkPrev{
+    left:1%;
+}
+#tuinLinkNext {
+    right:1%;
+}
+/**************************
+* MARK: Container
+**************************/
+#webringButtonsContainer {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 10%;
+}
+.webringNew {
+    overflow:hidden !important;
+    min-height:24em !important;
+}
+.webringNew h2 {
+    display:block;
+}
+.webringNew a {
+    display:inline;
+    position:absolute;
+    text-align: center;
+    font-family:"Comic Relief";
+    font-size:clamp(2rem, 2vw, 2.5rem);
+    text-decoration: underline;
+    min-width:100px;
+    max-width:10%;
+    height:auto;
+    border-radius:50%;
+    padding:1%;
+    margin:5%;
+}
+/**************************
+* MARK: Site link onderaan
+**************************/
+.viaTuintje {
+    font-family: "First Coffee";
+}
+.viaTuintje a {
+    position: static !important;
+    font-size: clamp(1rem, 1vw, 1.5rem) !important;
+    max-width:100% !important;
+    outline:none !important;
+    margin:0% !important;
+}

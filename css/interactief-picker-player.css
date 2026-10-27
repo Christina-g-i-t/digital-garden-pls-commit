@@ -1,0 +1,167 @@
+.backgroundImg {
+    mix-blend-mode: normal;
+}
+.scrollLock {
+    overflow-y: scroll !important;
+    height:45em;
+}
+.scrollLock img {
+    float:none;
+    width:98%;
+    height:auto;
+    aspect-ratio: auto;
+    outline: 0.3vw solid light-dark(var(--light-tekstkleur), var(--dark-tekstkleur));
+    margin:1%;
+}
+/**************************
+* MARK: Time & date
+**************************/
+.textContainer img {
+    background-color: transparent;
+    border:none;
+}
+.timeContainer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align:center;
+}
+#currentTime {
+    min-width:200px;
+    width:5em;
+    border: 0.3vw solid rgb(85, 131, 210);
+    outline: 0.3vw solid rgb(57, 79, 152);
+    border-radius: 0.5vw;
+    background-color: black;
+    background: radial-gradient(rgb(194, 169, 169), black);
+    color: rgb(74, 219, 255);
+    font-size:clamp(2rem, 2vw, 3rem);
+    font-weight: bold;
+}
+/**************************
+* MARK: Audio player 
+**************************/
+.bgBg {
+    background-image: url('https://cdn.pixabay.com/photo/2017/08/15/08/23/stars-2643089_1280.jpg') !important;
+    background-position: 50% 10%;
+}
+#trackImg {
+    width:10em;
+    height:auto;
+    margin:0;
+    float:none;
+    animation: spin 8s linear infinite;
+}
+.playTheme {
+    background-color: green;
+    outline: 0.3vw solid var(--light-accentkleur);
+}
+.audioButton {
+    display:inline;
+    min-width:20px;
+    width:2em;
+    height:auto;
+    margin-left: 0.5em;
+}
+.time {
+    display:inline;
+    background-image: none;
+    border:none;
+}
+#playerTimeContainer {
+    display:inline;
+    min-width:40em;
+}
+@keyframes spin {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+}
+audio {
+  width:100%;
+  padding-top:1em;
+}
+audio::-webkit-media-controls-current-time-display {
+  display: none;
+}
+audio::-webkit-media-controls-time-remaining-display {
+  display: none;
+}
+audio::-webkit-media-controls-play-button {
+  display: none;
+}
+audio::-webkit-media-controls-panel {
+  -webkit-justify-content: center;
+}
+/**************************
+* MARK: Color picker 
+**************************/
+#colorPicker {
+    float:right;
+    border: none;
+    background-color: var(--dynamic-color);
+    height:5em;
+    width:5em;
+    margin:3%;
+}
+#dynamicTextColor {
+    text-shadow: none;
+    background-image: none;
+    border: none;
+}
+#dynamicBg {
+    transition: all 250ms;
+    --dynamic-color: white;
+    background-image: none;
+    background-color: contrast-color(var(--dynamic-color));
+}
+/**************************
+* MARK: iframe 
+**************************/
+iframe {
+    width:100%;
+    height:35vh;
+}
+a[target="_blank"] {
+    font-family: Comic Relief, Sans-Serif;
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    text-decoration: underline;
+    margin:1%;
+}
+/**************************
+* MARK: Variable overview
+**************************/
+.variableColorContainer article p {
+    font-family: "First Coffee";
+    border:none;
+    outline: 0.3vw solid light-dark(var(--light-borderkleur), var(--dark-rood-outlinekleur));
+    background-image: none;
+}
+.variableColorContainer article {
+    background-image: light-dark( linear-gradient(170deg in oklch, var(--light-outlinekleur) 10%, var(--light-accentkleur), var(--dark-groen-schaduwkleur) 90%), linear-gradient(170deg in oklch, var(--dark-hoofdkleur), var(--dark-rood-outlinekleur)))
+}
+.kleurText article p {
+    font-size: clamp(1.4rem, 1.4vw, 2rem);
+}
+.darkText {
+    color:rgb(32, 32, 31);
+    text-shadow: none;
+}
+.variableColorLight {
+    color-scheme: light;
+}
+.variableColorDark {
+    color-scheme: dark;
+}
+.bronnenContainer a {
+    color:light-dark(var(--light-outlinekleur), rgb(255, 0, 140));
+    text-shadow:none;
+    background-color: light-dark(var(--light-tekstkleur), var(--dark-tekstkleur));
+    text-decoration:underline;
+    font-weight: bold;
+}
+.bronnenContainer img {
+    margin-top:5%;
+    width:90%;
+    height:auto;
+}

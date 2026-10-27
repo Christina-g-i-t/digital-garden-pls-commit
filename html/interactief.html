@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="nl" id="htmlTheme" class="lightTheme">
+<head>
+    <title>Interactief - Digital Garden</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg">
+    <link rel="shortcut icon" href="../images/favicon/favicon.ico">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/grid-text-containers-base.css">
+    <link rel="stylesheet" href="../css/flower-button.css">
+    <link rel="stylesheet" href="../css/interactief-picker-player.css">
+    <link rel="stylesheet" href="../css/gradient-animaties-opdracht.css">
+</head>
+<body style="background-color:rgb(95, 90, 91)">
+    <script>
+        document.addEventListener('DOMContentLoaded', function load() {
+            document.getElementById("trackImg").style.animationPlayState = "paused";
+            pickSong(songList);
+        });
+    </script>
+<nav>
+    <a class="screenReaderShortcut" href="#mainContent">Overslaan naar hoofdcontent</a>
+    <a class="btn-style" href="../index.html">Home</a>
+    <a class="btn-style here" >Interacties</a>
+    <a class="btn-style" href="./characters.html">Karakters</a>
+    <a class="btn-style" href="./inspiration-garden.html">Garden</a>
+    <a class="btn-style" href="./aantekeningen.html">Aantekeningen</a>
+    <a class="btn-style" href="./over.html">Over</a>
+</nav>
+    <article id="mainContent" class="textContainer introText">
+    <h1>Technische interacties</h1>
+    <p>Kleine simpele experimenten die het (voornamelijk) doen. En bronnen!</p>
+    </article>
+
+<main class="gridColumnsContainer">
+
+    <article class="textContainer timeContainer">
+    <h2>Vandaag is het:</h2>
+    <p id="currentTime">...</p>
+    <p id="currentDate">...</p>
+    </article>
+    <script src="../js/update-date-time.js"></script>
+
+    <article class="textContainer">
+        <h2>Bloemen</h2>
+        <div id="field">
+        <p id="flower">Voorbeeld</p>
+        </div>
+    </article>
+
+    <article class="textContainer">
+    <h2>Delta Aero Vibes -<br>Powered by: Humans<br>(en sterke compression)</h2>
+    <p class="bgBg">
+    <img id="trackImg" src="../images/export-spinvis.png" alt="Drawing of a fish">
+    <span id="trackName" style="min-height:3em"> >Wachten op input...</span>
+        <button class="btn-style audioButton" onclick="pickPrevSong(songList)">&lt;</button>
+        <button class="btn-style audioButton" id="playButton" onclick="togglePlay()">▶</button>
+        <button class="btn-style audioButton" onclick="pickNextSong(songList)">&gt;</button>
+        <span id="playerTimeContainer">
+        <span id="currentSongTime" class="time">0:00</span> : <span id="durationTime" class="time">0:00</span>
+        </span><br>
+        <audio id="trackAudio" controls src="../sound/Notice_Me_More.mp3"></audio><br>
+        <!--
+        <input type="range" id="seek-slider" min="1" max="100" value="0" onchange="seekTo()">
+        <input type="range" id="volume-slider" max="100" value="100">
+        -->
+        Free-to-use achtergrondmuziek via Opentracks (voormalig DOVA-SYNDROME)
+    </p>
+    </article>
+    <script src="../js/audio-player.js"></script>
+
+    <article class="textContainer">
+        <h2>Prehistorische entertainment</h2>
+        <p>Verouderd marquee element, maar zeer entertaining.</p>
+            <marquee
+    style="border: 0.3vw solid rgb(85, 131, 210); outline: 0.3vw solid rgb(57, 79, 152); border-radius: 0.5vw; background-color:black; background: radial-gradient(rgb(194, 169, 169), black); color: rgb(74, 219, 255); font-size: 1em; font-weight:bold;"
+    direction="down"
+    width="250"
+    height="200"
+    behavior="alternate"
+    class="outlined">
+    <marquee behavior="alternate">DVD</marquee>
+    </marquee>
+    </article>
+
+    <article class="textContainer">
+        <h2>Color picker</h2>
+        <input id="colorPicker" type="color">
+        <p id="dynamicBg"><span id="dynamicTextColor">hex #xxxxxx<br>rgb(x, x, x)</span></p>
+    </article>
+    <script src="../js/color-picker-display.js"></script>
+
+    <article class="textContainer">
+        <h2>D20 dobbelsteen</h2>
+        <p>Krijg een random getal tussen 1 en 20.</p>
+        <button id="dice" class="btn-style">Gooi</button>
+    </article>
+    <script src="../js/dice.js"></script>
+
+    <article class="textContainer">
+        <h2>Aaibare Alaskan Malamute</h2>
+        <p>In het Copper/Ahtna chapter in Alaska laat deltakarakter Tagha aan Rosie de Iditarod Trail Hondenslede Race zien.<br><br>
+            - Druk op de hond om de interactie te beginnen!<br>
+            - Maak een grote aaibeweging over de hond met de muis :D</p>
+        <img id="deltaDog" onclick="setPose(poseOptions)" src="../images/dog/export-dog-tail-default-open.png" alt="Drawing of an Alaskan malamute dog">
+    </article>
+    <script src="../js/pet-the-dog.js"></script>
+
+    <article class="textContainer">
+        <h2>Songtekst opdracht</h2>
+        <p>Interactieve iframe: Virtual Insanity door Jamiroquai.<a target="_blank" href="./songtekst-opdracht.html" class="linkSimple btn-style">Direct naar songtekst pagina</a></p>
+        <iframe src="./songtekst-opdracht.html"></iframe>
+    </article>
+
+    <article class="textContainer variableColorContainer kleurText">
+        <h2>Variable kleuren: light & dark</h2>
+        <p>Kleuren die je tegenkomt op de site.</p>
+        <article class="variableColorLight">
+            <h3>Light mode kleuren</h3>
+            <p style="background-color:var(--light-hoofdkleur)">--light-hoofdkleur: rgb(85, 131, 210);</p>
+            <p style="background-color:var(--light-outlinekleur)">--light-outlinekleur: rgba(57, 79, 152, 0.9);</p>
+            <p style="background-color:var(--light-accentkleur)">--light-accentkleur: rgba(19, 94, 31, 0.9);</p>
+            <p class="darkText" style="background-color:var(--light-borderkleur)">--light-borderkleur: rgba(174, 236, 229, 0.8);</p>
+            <p class="darkText" style="background-color:var(--light-tekstkleur)">--light-tekstkleur: rgb(233, 239, 239);</p>
+        </article>
+        <article class="variableColorDark">
+            <h3>Dark mode kleuren</h3>
+            <p style="background-color:var(--dark-hoofdkleur)">--dark-hoofdkleur: rgb(132, 75, 85);</p>
+            <p style="background-color:var(--dark-rood-outlinekleur)">--dark-rood-outlinekleur: rgba(94, 19, 43, 0.9);</p>
+            <p style="background-color:var(--dark-groen-schaduwkleur)">--dark-groen-schaduwkleur: rgba(28, 60, 36, 0.9);</p>
+            <p style="background-color:var(--dark-knop-shine)">--dark-knop-shine: rgb(76, 137, 75);</p>
+            <p class="darkText" style="background-color:var(--dark-borderkleur)">--dark-borderkleur: rgba(236, 165, 165, 0.8);</p>
+            <p class="darkText" style="background-color:var(--dark-tekstkleur)">--dark-tekstkleur: rgb(237, 223, 223);</p>
+        </article>
+    </article>
+
+    <article class="textContainer variableColorContainer">
+        <h2>Gradienten: light & dark</h2>
+        <p>De gradienten die je tegenkomt op de site.</p>
+        <article class="variableColorLight">
+            <h3>Light mode gradienten</h3>
+            <p style="background-image:linear-gradient(to bottom left, var(--light-hoofdkleur), rgb(90, 110, 176), rgba(141, 158, 214, 0.8), var(--light-outlinekleur), var(--light-hoofdkleur))">Knoppen: linear-gradient(to bottom left, var(--light-hoofdkleur), rgb(90, 110, 176), rgba(141, 158, 214, 0.8), var(--light-outlinekleur), var(--light-hoofdkleur))</p>
+            <p style="background-image:linear-gradient(170deg in oklch, var(--light-outlinekleur) 10%, var(--light-accentkleur) 90%)">Navigatie HIER: linear-gradient(170deg in oklch, var(--light-outlinekleur) 10%, var(--light-accentkleur) 90%)</p>
+            <p style="background-image:linear-gradient(170deg in oklch, var(--light-outlinekleur) 10%, var(--light-accentkleur), var(--dark-groen-schaduwkleur) 90%)">Headers, textboxes: linear-gradient(170deg in oklch, var(--light-outlinekleur) 10%, var(--light-accentkleur), var(--dark-groen-schaduwkleur) 90%)</p>
+            <p style="background-image:repeating-linear-gradient(45deg, rgba(106, 210, 85, 0.6) 10px, rgba(230, 255, 86, 0.5) 100px, rgba(47, 207, 165, 0.6) 250px, rgba(106, 210, 85, 0.6) 400px)">Text container: repeating-linear-gradient(45deg in oklch, rgba(106, 210, 85, 0.6) 10px, rgba(230, 255, 86, 0.5) 100px, rgba(47, 207, 165, 0.6) 250px, rgba(106, 210, 85, 0.6) 400px)</p>
+        </article>
+        <article class="variableColorDark">
+            <h3>Dark mode gradienten</h3>
+            <p style="background-image:linear-gradient(to bottom left, var(--dark-groen-schaduwkleur), var(--dark-knop-shine), var(--dark-groen-schaduwkleur))">Knoppen: linear-gradient(to bottom left, var(--dark-groen-schaduwkleur), var(--dark-knop-shine), var(--dark-groen-schaduwkleur))</p>
+            <p style="background-image:linear-gradient(in oklch, rosybrown, var(--dark-hoofdkleur))">Navigatie HIER: linear-gradient(in oklch, rosybrown, var(--dark-hoofdkleur))</p>
+            <p style="background-image:linear-gradient(170deg in oklch, var(--dark-hoofdkleur), var(--dark-rood-outlinekleur))">Headers, textboxes: linear-gradient(170deg in oklch, var(--dark-hoofdkleur), var(--dark-rood-outlinekleur))</p>
+            <p style="background-image:linear-gradient(to bottom right, rgb(159, 109, 97), rgba(245, 200, 200, 0.7), rgb(159, 109, 97))">Text container: linear-gradient(to bottom right, rgb(159, 109, 97), rgba(245, 200, 200, 0.7), rgb(159, 109, 97))</p>
+        </article>
+    </article>
+
+    <article class="textContainer gradientAnimatieOpdracht">
+        <h2>Extra interactieve hovers</h2>
+        <div>Clock effect</div>
+        <div>Light effect</div>
+        <div>Jumping fish</div>
+        <div>Font Stretch</div>
+        <div>Hourglass effect</div>
+    </article>
+
+    <article class="textContainer scrollLock">
+        <h2>Deep dives en hun kennisbrenging</h2>
+        <p>S0 - HTML & CSS Basics<br>
+        ~ De site bestaat uit nette, duidelijke html en css.
+        <img src="../images/deep-dives-summary-images/screenshot-dives-nette-html.jpg" alt="">
+    </p>
+        <p>S0 - Praktische CSS<br>
+        ~ Veel gestijld met css, komen ook verschillende selectoren bij kijken.
+        <img src="../images/deep-dives-summary-images/screenshot-dives-selectoren.jpg" alt="">
+    </p>
+        <p>S0 - CSS: fonts met kleur en effecten<br>
+        ~ Fonts gevonden via DaFont en Google Fonts, toegevoegd met @fontface.
+        <img src="../images/deep-dives-summary-images/screenshot-dives-font-face.jpg" alt="">
+    </p>
+        <p>S0 - Typografie<br>
+        ~ Speels lettertype met persoonlijkheid voor knoppen en headers, en simpel leesbaar lettertype voor leesmateriaal.
+        <img src="../images/deep-dives-summary-images/screenshot-lettertypes-speels-en-leesbaar.jpg" alt="">
+    </p>
+        <p>S0 - Schetsen van o.a. interactie en animatie<br>
+        ~ Gemaakt wanneer nodig.
+        <img src="../images/deep-dives-summary-images/screenshot-dives-img_rosie-hoofdmenu-schets.jpg" alt="">
+    </p>
+        <p>S0 - Interactie: MMD, micro-interacties, forms<br>
+        ~ Interactieve elementen zoals knoppen hebben hover, focus en active states.
+        <img src="../images/deep-dives-summary-images/screenshot-dives-states.jpg" alt="">
+    </p>
+        <br>
+        <p>S1 - Light & Dark theme<br>
+        ~ Custom properties gebruikt, bv voor de kleuren. Schakelen tussen dark en light mode met light-dark().
+        <img src="../images/deep-dives-summary-images/screenshot-dives-variable-colors.jpg" alt="">
+    </p>
+        <p>S1 - Mooie kleuren en gradients<br>
+        ~ Veel kleuren gebruikt met gradienten, vooral linear-gradient(), maar ook gebruik gemaakt van conic-gradient() en repeating-linear-gradient(). Geexperimenteerd met @property. Voldoende contrast tussen de kleuren.
+        <img src="../images/notes-images/screenshot-chars-focus-brightend-light.jpg" alt="">
+    </p>
+        <p>S1 - Grid 101 + Media queries<br>
+        ~ Grid kolommen en flexbox gebruikt. @media gebruikt voor het responsive maken van de site op kleinere formaten zoals > 30em. Bijvoorbeeld op de homepage op een groot scherm, staat de afbeelding van de mascotte bovenaan op de zijkant, maar op mobiel formaat staat ze onderin binnen het vak.
+        <img src="../images/deep-dives-summary-images/screenshot-dives-index-img.jpg" alt="" style="width:50%">
+    </p>
+        <p>S1 - Responsive grid + Grid-areas<br>
+        ~ Display grid gebruikt samen met grid-template-columns: repeat(auto-fit, minmax(40em, 1fr)) voor responsive kolommen.
+        <img src="../images/deep-dives-summary-images/screenshot-dives-grid.jpg" alt="">
+    </p>
+        <p>S2 - Buttons, states en selectors<br>
+        ~ Alle knoppen hebben hover, focus en active states.
+        <img src="../images/deep-dives-summary-images/screenshot-dives-knop-focus.jpg" alt="">
+    </p>
+        <p>S2 - Buttons + Dialogs<br>
+        ~ Buttons die allerlei dingen doen zoals light/dark wisselen. Cookie melding is een dialog.
+        <img src="../images/deep-dives-summary-images/screenshot-dives-cookie-dialog.jpg" alt="">
+    </p>
+        <p>S2 - Position + Dialogs<br>
+        ~ Per position een voorbeeld: fixed voor de navigatie, sticky voor de popup in de inspiratiegarden, absolute voor de decoratieve afbeelding op het hoofdmenu, relative voor de containers van de afbeeldingrijtjes op de over pagina, static voor alles waar geen specifiek type position voor nodig is.
+        <img src="../images/deep-dives-summary-images/screenshot-dives-position-fixed.jpg" alt="">
+    </p>
+        <p>S2 - Meer interactie met HTML en CSS<br>
+        ~ Target="blank" toegevoegd aan de link naar de pagina in het iframe op de interacties pagina zodat het opent in een nieuw tabblad, en je makkelijker terug kan naar de hoofdsite. Gestijld met selector a[target="_blank"].
+        <img src="../images/deep-dives-summary-images/screenshot-dives-target-blank.jpg" alt="" style="width:50%">
+    </p>
+        <br>
+        <p>S3 - Interessantere layouts<br>
+        ~ Vw voor bijna alle grootte-gerelateerde situaties gebruikt. Clamp() gebruikt voor responsive lettergroottes.
+        <img src="../images/deep-dives-summary-images/screenshot-dives-font-clamp.jpg" alt="">
+    </p>
+        <p>S3 - Variabele fonts<br>
+        ~ Functioneel variabele font "MovementV" gevonden en hover transities met font-variation-settings uitgeprobeerd.
+        <img src="../images/notes-images/screenshot-font-stretch-state-hover.jpg" alt="" style="width:50%">
+    </p>
+        <p>S3 - CSS animaties<br>
+        ~ Animaties gemaakt met @keyframes, en transition bv naar :hover en :active.
+        <img src="../images/deep-dives-summary-images/screenshot-dives-keyframes.jpg" alt="">
+    </p>
+        <p>S3 - Maak je website af<br>
+        ~ Validatie en toegankelijkheid doorstaan.
+        <img src="../images/deep-dives-summary-images/screenshot-dives-validatie-ok.jpg" alt="">
+    </p>
+    </article>
+
+    <article class="textContainer">
+        <h2>Inspirerende digital gardens gezien, met resources</h2>
+        <p>Verzameld aan het begin van dit blok. Alle sites gelinkt.<br>Druk op de iframe hieronder en gebruik de links en rechts pijltjes voor het navigeren door de Remark presentatie.<a target="_blank" href="./remark-presentatie.html" class="linkSimple btn-style">Direct naar presentatie pagina</a></p>
+        <iframe src="./remark-presentatie.html"></iframe>
+    </article>
+
+    <article class="textContainer bronnenContainer">
+        <h2>Technische bronnen</h2>
+        <p>
+        - Vorige opleiding voorkennis (html, css, javascript, python)<br><br>
+        - MDN (wat doet een element of property precies op zichzelf)<br><a>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/418</a><br><br>
+        - Stack Overflow (specifieke antwoorden bij specifieke vragen)<br><a>https://stackoverflow.com/questions/26449590/make-css-pseudoelement-before-same-height-as-main-element</a><br><br>
+        - De deep dives (specifieke handige inspiratie)<br><a>https://codepen.io/editor/vasilisvg/pen/01a10b68-abd8-77ce-a22a-64502d29c880</a><br><br>
+        - Uitproberen en combineren en kijken wat er gebeurt.<br><a>https://christina.keultjes.net/digital-garden/index.html</a>
+        </p>
+    </article>
+
+        <article class="textContainer bronnenContainer">
+        <h2>Overige bronnen</h2>
+        <p>
+        - Pixabay (Royalty-vrije afbeeldingen. Bijvoorbeeld hierachter de ruimte-achtergrond en de gif er bovenop)<br><a>https://pixabay.com/illustrations/stars-sky-space-space-wallpaper-2643089/</a><br><br>
+        - Opentracks [voormalig DOVA-SYNDROME] (Royalty-vrije muziek gemaakt door echte mensen. Voor de muziekspeler op deze pagina)<br><a>https://opentracks.com/en/bgm/detail/23852</a><br><br>
+        - Mezelf (Eigen tekeningen, eigen code, eigen passie)<br><br><img src="../images/export-goldi-en-rosie-wojack-pointing.png">
+    </p>
+    </article>
+
+</main>
+<button id="lightDark" class="btn-style">Light/Dark!</button>
+<button id="btt" class="btn-style">Back to top!</button>
+<script src="../js/back-to-top.js"></script>
+<script src="../js/light-dark-theme-switch.js"></script>
+<img class="backgroundImg" src="https://cdn.pixabay.com/photo/2017/08/15/08/23/stars-2643089_1280.jpg" alt="Space">
+<img class="backgroundImg" style="filter: saturate(0.1); opacity: 0.2;" src="https://cdn.pixabay.com/animation/2024/05/22/19/11/19-11-53-681_512.gif" alt="Space">
+</body>
+</html>

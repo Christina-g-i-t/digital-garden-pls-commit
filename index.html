@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="nl" id="htmlTheme" class="lightTheme">
+<head>
+    <title>Homepage - Digital Garden</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="./images/favicon/favicon.svg">
+    <link rel="shortcut icon" href="./images/favicon/favicon.ico">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/grid-text-containers-base.css">
+    <link rel="stylesheet" href="./css/index-webring-cookies.css">
+    <link rel="stylesheet" href="./css/index-webring-style.css">
+</head>
+<body>
+    <script>
+    document.addEventListener('DOMContentLoaded', function load() {
+        insertWebring(sites);
+    })
+    </script>
+<header>
+    <article class="textContainer">
+        <img id="headerImg" src="./images/export-rosie-sitting-floating.png" alt="">
+        <h1 class="title">{Digital Garden}
+            <span>Geologie, Karakters, Ideeën</span></h1>
+        <nav id="homeMenu">
+        <a class="btn-style" href="./html/interactief.html">Interacties<img src="./images/export-corpa.png" alt=""></a>
+        <a class="btn-style" href="./html/characters.html">Karakters<img src="./images/export-abbigail.png" alt=""></a>
+        <a class="btn-style" href="./html/inspiration-garden.html">Garden<img src="./images/export-sungaia.png" alt=""></a>
+        <a class="btn-style" href="./html/aantekeningen.html">Notes<img src="./images/export-rosie-searchsearch.png" alt=""></a>
+        <a class="btn-style" href="./html/over.html">Over<img src="./images/export-my-char.png" alt=""></a>
+        <a class="btn-style" href="./html/remark-presentatie.html">Remark<img src="./images/export-globus.png" alt=""></a>
+        </nav>
+    </article>
+</header>
+<button id="lightDark" class="btn-style">Light/Dark!</button>
+<button id="btt" class="btn-style">Back to top!</button>
+<script src="./js/back-to-top.js"></script>
+<script src="./js/light-dark-theme-switch.js"></script>
+<img class="backgroundImg" src="https://cdn.pixabay.com/photo/2023/07/01/18/21/water-8100724_1280.jpg" alt="Alpen">
+
+<article class="textContainer webringNew">
+    <h2>Digitaal tuintje webring</h2>
+    <!-- Importeer het webring component, voeg jouw eigen domein toe in data-page-->
+    <!--
+    <article class="textContainer webringContainer">
+    <script
+      data-page="https://christina.keultjes.net/digital-garden/new-index.html"
+      src="http://digitaaltuintje.nl/webring.js"
+      defer
+    >
+    </script>
+    
+    <footer style="height:10em">
+        <button id="cookiesToestaanButton" class="btn-style webringControl" commandfor="cookieModal" command="show-modal" style="width:30em; max-width:80%; text-align: left;">
+          Cookies toestaan?
+        </button>
+    </footer>
+    -->
+    <button class="btn-style webringControl" onclick="shuffleWebring()">Shuffle webring</button>
+
+    <dialog id="cookieModal">
+      <form method="dialog">
+        <p>
+          <img id="cookieImg" src="./images/export-rosie-chibi-cookie-offer.png" alt="Chibi character offering cookie">
+          Er worden op deze site standaard cookies gebruikt vanuit het hostingplatform en royalty-vrije afbeeldingensite Pixabay. Er zijn GEEN cookies nodig voor het inladen van de Digitaal Tuintje webring. Sta je deze cookies toe?
+          <br><br>
+        </p>
+        <button id="setCookie">Allow</button>
+        <button id="unsetCookie">Deny</button>
+      </form>
+    </dialog>
+        <div id="webringButtonsContainer">
+        <a id="tuinLinkPrev" class="btn-style">&lt;</a>
+        <a id="tuinLinkRandom">...</a>
+        <a id="tuinLinkNext" class="btn-style">&gt;</a>
+        </div>
+    <p class="viaTuintje">Via<a href="https://digitaaltuintje.nl">digitaaltuintje.nl</a></p>
+    </article>
+    <script src="js/webring-data.js"></script>
+    <script src="js/webring-herinterpretatie.js"></script>
+
+    <button id="cookiesToestaanButton" class="btn-style" commandfor="cookieModal" command="show-modal">
+        <img id="cookieButtonImg" src="./images/export-rosie-chibi-cookie-offer.png" alt="Chibi character offering cookie">
+    </button>
+    <script src="js/index-cookies.js"></script>
+    
+</body>
