@@ -1,19 +1,34 @@
 #lightDark {
     bottom:1%;
 }
+.songTitle {
+    background: conic-gradient(magenta 25%, black 25%, black 50%, yellow 50%, yellow 75%, cyan 75%, cyan 100%);
+    background-size: 60px 60px;
+    background-repeat: repeat;
+    background-clip: text;
+    color: transparent;
+    font-size: 4vw;
+    text-shadow: none;
+}
 h2 {
     font-size:2.8vw;
 }
 h3 {
     font-size:2vw;
     letter-spacing: 1vw;
+    animation: textSkewY 652ms ease-in-out alternate infinite;
 }
 .twisty {
     letter-spacing: 1.5vw;
     font-style: italic;
+    animation: textSkewX 1304ms ease-in-out alternate infinite !important;
+}
+p:not(.twisty) {
+    animation: textBeat 652ms ease-in-out alternate infinite;
 }
 .marginTop {
     margin-top:4vw;
+    animation: textTall 1304ms ease-in-out alternate infinite;
 }
 p {
     font-size:1.4vw;
@@ -37,4 +52,20 @@ article {
 div {
     border-right: solid light-dark(var(--light-tekstkleur), var(--dark-tekstkleur));
     margin-right:3vw;
+}
+@keyframes textBeat {
+    0% {transform:scale(1);}
+    100% {transform:scale(1, 0.8);}
+}
+@keyframes textTall {
+    0% {transform:scale(1);}
+    100% {transform:scale(1, 1.5);}
+}
+@keyframes textSkewX {
+    0% {transform:skewX(0); letter-spacing: 0.8vw;}
+    100% {transform:skewX(-35deg); letter-spacing: 1.5vw;}
+}
+@keyframes textSkewY {
+    0% {transform:skewY(0);}
+    100% {transform:skewY(5deg);}
 }
